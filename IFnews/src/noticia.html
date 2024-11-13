@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IFNews - Basquete em dose dupla</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Cabeçalho com logo e menu -->
+  <header>
+    <a href="../index.html">
+      <img src="/img/logoif.png" alt="IFNews Logo" id="logo">
+    </a>  
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="categorias">Notícias
+          <ul class="dropdown">
+            <li><a href="/src/esportes.html">Esportes</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="institucional.html">Institucional</a></li>
+            <li><a href="premiacoes.html">Premiações</a></li>
+            <li><a href="envie-uma-noticia.html">Envie uma notícia</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Conteúdo Principal - Detalhes da Notícia -->
+  <main>
+    <section class="detalhes-noticia">
+      <article class="noticia-detalhe">
+        <!-- Área de Texto -->
+        <div class="noticia-texto">
+          <h1 class="noticia-titulo">Basquete em dose dupla</h1>
+          <p class="noticia-descricao">
+            No basquete, momentos de tensão também foram vividos pela equipe até a conquista do título.
+             De acordo com o professor Jorge Otte, ter conseguido êxito na etapa sul-brasileira dos JIFs pelo terceiro ano seguido não significa que tenha sido fácil.
+              Ele lembra que, no masculino, por exemplo, a semifinal foi conquistada na prorrogação. Já na final, o time masculino começou perdendo o jogo, mas em seguida abriu vantagem e fechou o resultado em 58 a 37 sobre o IF Farroupilha. 
+              Entre as meninas, o chaveamento da disputa fez com que o time feminino chegasse ao último jogo já com a classificação certa – elas haviam ganho os dois jogos anteriores e as adversárias, perdido.
+               Ainda assim, as meninas venceram o último confronto por 45 a 10 contra o IFC. 
+              Para Jorge, os resultados obtidos pelas duas equipes nos últimos anos, além de serem fruto da paixão dos grupos pela modalidade, também evidenciam a dedicação dos estudantes ao esporte.
+          </p>
+        </div>
+        <!-- Área de Fotos -->
+        <div class="noticia-fotos">
+          <img src="/imgEventos/evento1.jpg" alt="Imagem da Notícia" id="foto-grande" class="foto-grande">
+          <div class="miniaturas">
+            <img src="/imgEventos/evento1.jpg" alt="Imagem 1" class="miniatura active">
+            <img src="/imgEventos/meninas1.jfif" alt="Imagem 2" class="miniatura">
+            <img src="/imgEventos/meninas2.jfif" alt="Imagem 3" class="miniatura">
+            <img src="/imgEventos/meninas3.jpg" alt="Imagem 4" class="miniatura">
+          </div>
+        </div>
+        <!-- Novo Parágrafo de Texto Após as Fotos -->
+        <div class="noticia-texto">
+          <p class="noticia-descricao">
+            Além dos resultados impressionantes nas competições, a equipe também investiu em treinamentos intensivos e estratégias táticas inovadoras, fortalecendo ainda mais o espírito de equipe e a competitividade. 
+            A dedicação e o esforço contínuo dos jogadores e da comissão técnica foram fundamentais para alcançar esse sucesso contínuo.
+             Os treinos incluíram simulações de <br>partidas em cenários de alta pressão, o que permitiu aos jogadores desenvolver habilidades para tomar decisões rápidas e estratégicas durante momentos críticos dos jogos. 
+             Esse tipo de preparação foi crucial para enfrentar adversários cada vez mais fortes e habilidosos nas competições, além de aumentar a confiança dos atletas em situações desafiadoras.
+              Além disso, o investimento em tecnologia esportiva, como a análise de desempenho por vídeo, permitiu à equipe identificar pontos fortes e fracos em tempo real, aprimorando suas táticas e ajustando estratégias específicas para cada oponente. 
+              Essa abordagem inovadora elevou o nível técnico dos jogadores, que passaram a corrigir erros e a desenvolver novas habilidades com rapidez e eficiência.
+             O apoio da comunidade e o incentivo da instituição também foram fundamentais para sustentar essa jornada de crescimento. 
+             Com o suporte financeiro para aquisição de equipamentos modernos e a realização de competições amistosas preparatórias, os atletas puderam se concentrar exclusivamente no aperfeiçoamento do jogo. 
+             Esse ambiente de incentivo ajudou a criar uma forte cultura de compromisso e respeito pelo esporte, onde cada jogador entende o valor do trabalho em equipe e o papel de cada um para o sucesso coletivo. 
+          </p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Logos com Efecto CSS -->
+  <section class="logos">
+    <a href="http://www.ifsul.edu.br/" target="_blank">
+      <img src="/img/Instituto_Federal_Sul-rio-grandense.svg" alt="IFSul Logo" class="logo-hover">
+    </a>
+    <a href="https://utec.edu.uy/es/" target="_blank">
+      <img src="/img/utecLogo.png" alt="UTEC Logo" class="logo-hover">
+    </a>
+    <a href="https://www.utu.edu.uy/node/1598" target="_blank">
+      <img src="/img/utu.png" alt="UTU Logo" class="logo-hover">
+    </a>
+  </section>
+
+  <!-- JavaScript para a Interatividade das Fotos -->
+  <script>
+    const miniaturas = document.querySelectorAll('.miniatura');
+    const fotoGrande = document.getElementById('foto-grande');
+    let currentIndex = 0;
+    let intervalo;
+
+    miniaturas.forEach((miniatura, index) => {
+      miniatura.addEventListener('click', () => {
+        atualizarFoto(index);
+        resetIntervalo();
+      });
+    });
+
+    function atualizarFoto(index) {
+      fotoGrande.classList.add('fade-out');
+      setTimeout(() => {
+        fotoGrande.src = miniaturas[index].src;
+        fotoGrande.classList.remove('fade-out');
+      }, 500);
+      miniaturas.forEach(m => m.classList.remove('active'));
+      miniaturas[index].classList.add('active');
+      currentIndex = index;
+    }
+
+    function rotarFotos() {
+      currentIndex = (currentIndex + 1) % miniaturas.length;
+      atualizarFoto(currentIndex);
+    }
+
+    function iniciarIntervalo() {
+      intervalo = setInterval(rotarFotos, 5000);
+    }
+
+    function resetIntervalo() {
+      clearInterval(intervalo);
+      iniciarIntervalo();
+    }
+
+    window.onload = iniciarIntervalo;
+  </script>
+
+</body>
+</html>

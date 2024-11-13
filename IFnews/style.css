@@ -1,0 +1,494 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tipografías y Estilos Generales */
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+/* Encabezado */
+header {
+  background-color: #004d40;
+  color: #fff;
+  padding: 15px 40px; /* Incrementado de 20px a 40px en padding horizontal */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid #b2dfdb; /* Línea de separación */
+  margin-bottom: 30px; /* Espacio debajo del encabezado */
+}
+
+#logo {
+  width: 80px; /* Ajusta el tamaño aquí */
+  height: auto;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  position: relative;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #b2dfdb;
+}
+
+.categorias {
+  position: relative;
+  /* Eliminamos el margin-left anterior */
+}
+
+.categorias .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%; /* Centrar el dropdown respecto al padre */
+  transform: translateX(-50%); /* Ajustar para centrar completamente */
+  background-color: #004d40;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  /* Aseguramos que el dropdown no exceda la pantalla */
+  min-width: 150px;
+}
+
+.categorias:hover .dropdown {
+  display: block;
+}
+
+.dropdown li a {
+  color: #fff;
+  padding: 5px 10px;
+  display: block;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.dropdown li a:hover {
+  background-color: #00796b;
+}
+
+/* Sección Principal */
+main {
+  padding-top: 20px; /* Espacio superior en el contenido principal */
+}
+
+.categoria-noticias {
+  margin: 0 30px; /* Ajusta según necesites */
+}
+
+/* Sección de Noticias */
+.noticias {
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* Espacio entre la noticia destacada y las pequeñas */
+  padding: 0 30px; /* Espaciado horizontal */
+}
+
+/* Noticia Destacada */
+.noticia.destaque {
+  display: flex;
+  flex-direction: column;
+  background-color: #e0f2f1;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.noticia.destaque img {
+  width: 100%;
+  height: 250px; /* Reducción de la altura para evitar que sea demasiado grande */
+  object-fit: cover;
+}
+
+.noticia.destaque .info {
+  padding: 15px; /* Reducción del padding */
+}
+
+.noticia.destaque h2 {
+  font-size: 1.5em; /* Ajuste del tamaño de fuente */
+  margin-bottom: 8px;
+  color: #004d40; /* Color verde para el título principal */
+}
+
+.noticia.destaque p {
+  font-size: 0.95em;
+  color: #333;
+}
+
+/* Noticias Pequeñas */
+.noticias-pequenas {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.noticia {
+  flex: 1 1 calc(33.333% - 20px);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.noticia img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.noticia h3 {
+  padding: 15px;
+  font-family: 'Roboto Slab', serif;
+  color: #004d40; /* Color verde para los títulos de las noticias pequeñas */
+  text-decoration: none; /* Asegura que no haya subrayado */
+}
+
+.noticia p {
+  padding: 0 15px 15px 15px;
+  font-size: 0.95em;
+  color: #555;
+}
+
+.noticia:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Contador para el Proceso Seletivo */
+.contador {
+  background-color: #eee;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.2em;
+  color: #004d40;
+  margin: 20px;
+}
+
+.ctd-container {
+  text-align: center;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(248, 4, 4, 0.1);
+}
+
+.ctd-title {
+  margin-bottom: 1.5rem;
+}
+
+.ctd-timer {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.ctd-item {
+  background-color: #004d40;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  min-width: 80px;
+}
+
+.ctd-value {
+  font-size: 2.2em;
+  font-weight: bold;
+}
+
+.ctd-label {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+/* Sección de Depoimentos de Estudantes */
+.depoimentos {
+  background-color: #004d40;
+  color: #fff;
+  padding: 30px;
+  text-align: center;
+}
+
+.depoimentos h2 {
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.carousel {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.depoimento {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.depoimento.ativo {
+  display: flex;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.depoimento-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.depoimento-img {
+  width: 70px; /* Reducido de 100px a 70px */
+  height: 70px; /* Reducido de 100px a 70px */
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+}
+
+.depoimento h3 {
+  font-size: 1.2em;
+  color: #a5d6a7; /* Un tono verde más claro para el nombre */
+}
+
+.depoimento p {
+  font-size: 1em;
+  color: #fff;
+  max-width: 600px;
+}
+
+/* Animación para la aparición de los depoimentos */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Logos con Efecto CSS */
+.logos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px 0; /* Aumentado de 20px a 30px para mayor separación */
+}
+
+.logo-hover {
+  width: 100px;
+  transition: transform 0.3s;
+}
+
+.logo-hover:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Depoimentos Responsivos */
+@media (max-width: 1024px) {
+  .noticias-pequenas {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  /* Encabezado */
+  header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 15px 20px; /* Reducido el padding para pantallas pequeñas */
+  }
+  
+  .categorias .dropdown {
+      left: 0; /* Alinear el dropdown al inicio */
+      transform: none; /* Remover la transformación */
+  }
+
+  main {
+      padding-top: 15px;
+      margin: 0 15px;
+  }
+
+  .categoria-noticias {
+      margin: 0 15px;
+  }
+
+  .noticia {
+      flex: 1 1 100%; /* Hace que las noticias ocupen toda la anchura en pantallas más pequeñas */
+  }
+
+  .noticias-pequenas {
+      gap: 15px;
+  }
+
+  .logos {
+      flex-direction: column; /* Opcional: Disposición vertical en pantallas pequeñas */
+      align-items: center;
+      gap: 15px;
+  }
+
+  .logo-hover {
+      width: 80px; /* Ajusta el tamaño de los logos en pantallas pequeñas */
+  }
+
+  /* Ajustes para la sección de Depoimentos en móviles */
+  .depoimento-img {
+    width: 60px; /* Reducido de 70px a 60px */
+    height: 60px; /* Reducido de 70px a 60px */
+  }
+
+  .depoimento h3 {
+    font-size: 1em;
+  }
+
+  .depoimento p {
+    font-size: 0.9em;
+  }
+}
+
+/* Nuevas Reglas para Eliminar Subrayado en Enlaces Dentro de .noticia */
+.noticia a {
+  text-decoration: none; /* Elimina el subrayado */
+  color: inherit; /* Hereda el color del elemento padre */
+  display: block; /* Asegura que el enlace abarque todo el contenido del artículo */
+}
+
+.noticia a:hover {
+  /* Opcional: Cambiar color o agregar otros efectos en hover */
+  color: #a5d6a7; /* Color al pasar el cursor */
+}
+
+.noticia a h3 {
+  text-decoration: none; /* Asegura que el título no tenga subrayado */
+  color: #004d40; /* Asigna el mismo color que los títulos de otras noticias */
+}
+
+.noticia a p {
+  text-decoration: none; /* Asegura que el párrafo no tenga subrayado */
+  color: #555; /* Asigna el mismo color que los párrafos de otras noticias */
+}
+
+/* CSS para a seção de detalhes da notícia */
+.detalhes-noticia {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 0 30px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.noticia-detalhe {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; /* Aumenta el espacio entre elementos */
+}
+
+.noticia-texto {
+  flex: 1 1 60%;
+  margin-bottom: 20px; /* Espacio debajo de cada bloque de texto */
+  font-family: 'Roboto', sans-serif; /* Asegura la consistencia de la fuente */
+}
+
+.noticia-fotos {
+  flex: 1 1 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px; /* Espacio encima de la sección de fotos */
+  margin-bottom: 20px; /* Espacio debajo de la sección de fotos */
+}
+
+/* Establecer una altura fija para la imagen grande */
+.foto-grande {
+  width: 100%;
+  max-width: 300px;
+  height: 200px; /* Altura fija para evitar cambios de tamaño */
+  border-radius: 8px;
+  margin-bottom: 10px;
+  object-fit: cover;
+  overflow: hidden; /* Asegura que cualquier contenido excedente sea oculto */
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.foto-grande.fade-out {
+  opacity: 0;
+}
+
+.miniaturas {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.miniatura {
+  width: 80px;
+  height: 50px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  transition: border 0.3s;
+}
+
+.miniatura.active {
+  border: 2px solid #007BFF;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .detalhes-noticia {
+    flex-direction: column;
+    gap: 20px; /* Mantiene el gap en dispositivos móviles */
+  }
+
+  .noticia-detalhe {
+    flex-direction: column;
+    gap: 20px; /* Ajusta el espacio en móviles */
+  }
+
+  .noticia-texto, .noticia-fotos {
+    flex: 1 1 100%;
+    margin: 0; /* Elimina el margen en dispositivos móviles */
+  }
+
+  .miniatura {
+    width: 70px;
+    height: 45px;
+  }
+
+  .foto-grande {
+    max-width: 100%;
+    height: 200px; /* Mantiene la altura fija en móviles */
+  }
+}
+
+/* Estilo para el título de la noticia en la sección de detalles */
+.noticia-titulo {
+  font-size: 3em; /* Tamaño aumentado del título */
+  margin-bottom: 20px; /* Espacio debajo del título */
+  font-weight: bold; /* Asegura que el título sea destacado */
+  color: #004d40; /* Cambiado a verde medio para consistencia */
+  font-family: 'Roboto Slab', serif; /* Asegura la consistencia de la fuente */
+}

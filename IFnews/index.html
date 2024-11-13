@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IFNews</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Cabeçalho com logo e menu -->
+  <header>
+    <a href="index.html">
+      <img src="/img/logoif.png" alt="IFNews Logo" id="logo">
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="categorias">Notícias
+          <ul class="dropdown">
+            <li><a href="/src/esportes.html">Esportes</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="institucional.html">Institucional</a></li>
+            <li><a href="premiacoes.html">Premiações</a></li>
+            <li><a href="envie-uma-noticia.html">Envie uma notícia</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Destaque de Notícias -->
+  <section class="noticias">
+    <article class="noticia destaque">
+      <img src="/img/oportunidadeNoticia.png" alt="Notícia em destaque">
+      <div class="info">
+        <h2>Câmpus Santana do Livramento e Sapucaia do Sul abrem seleção para professores/as substitutos/as</h2>
+        <p>Ambas as vagas são para a área de Informação e Comunicação</p>
+      </div>
+    </article>
+    <!-- Outras noticias menores -->
+    <div class="noticias-pequenas">
+      <article class="noticia">
+        <img src="/img/imageCumple.jpeg" alt="Notícia 1">
+        <h3>Aniversário de 100 anos da Escuela Técnica Superior de Rivera - UTU</h3>
+        <p>IFSul parabeniza a Escuela Técnica Superior de Rivera - UTU pelos 100 anos</p>
+      </article>
+      <article class="noticia">
+        <img src="/img/naturezaImg.jpeg" alt="Notícia 2">
+        <h3>A Natureza</h3>
+        <p>Os alunos estudando sobre cultura dos povos originários trabalharam sobre os Mantos Tupinambás.</p>
+      </article>
+      <article class="noticia">
+        <img src="/img/eventoImg.jpeg" alt="Notícia 3">
+        <h3>21ª Semana Nacional de Ciência e Tecnologia na Região do Pampa</h3>
+        <p>O conteúdo proveniente de resultados de projetos.</p>
+      </article>
+      <article class="noticia">
+        <img src="/img/parabensImg.jpeg" alt="Notícia 4">
+        <h3>Feliz Aniversário, IFSul - Câmpus Santana do Livramento!</h3>
+        <p>Hoje é dia de celebrar mais um capítulo na história do nosso querido IFSul - Campus Santana do Livramento! 🎉</p>
+      </article>
+      <article class="noticia">
+        <img src="/img/fabitecIImg.jpg" alt="Notícia 5">
+        <h3>VI Feira Binacional de Tecnologia - FEBITEC vem aí!</h3>
+        <p>Queremos convidá-la(o) para a 6ª edição da Feira Binacional de Tecnologia - FEBITEC.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Contador para o próximo Processo Seletivo -->
+  <div class="ctd-container">
+    <h1 class="ctd-title">Processo Seletivo do IFSul</h1>
+    <div class="ctd-timer">
+        <div class="ctd-item">
+            <div id="ctd-days" class="ctd-value">00</div>
+            <div class="ctd-label">Dias</div>
+        </div>
+        <div class="ctd-item">
+            <div id="ctd-hours" class="ctd-value">00</div>
+            <div class="ctd-label">Horas</div>
+        </div>
+        <div class="ctd-item">
+            <div id="ctd-minutes" class="ctd-value">00</div>
+            <div class="ctd-label">Minutos</div>
+        </div>
+        <div class="ctd-item">
+            <div id="ctd-seconds" class="ctd-value">00</div>
+            <div class="ctd-label">Segundos</div>
+        </div>
+    </div>
+  </div>
+
+  <!-- Depoimentos -->
+  <section class="depoimentos">
+    <h2>Depoimentos de Estudantes</h2>
+    <div class="carousel">
+      <div class="depoimento ativo">
+        <div class="depoimento-header">
+          <img src="/imgDepoimentos/persona1.jpg" alt="Maria Silva" class="depoimento-img">
+          <h3>Maria Silva</h3>
+        </div>
+        <p> Participar das atividades do IFSul me proporcionou um crescimento pessoal e profissional incrível!</p>
+      </div>
+      <div class="depoimento">
+        <div class="depoimento-header">
+          <img src="/imgDepoimentos/persona2.jpg" alt="Yefferson Silva" class="depoimento-img">
+          <h3> Yefferson Silva</h3>
+        </div>
+        <p> Estudiar en un ambiente bilingüe también ha sido un gran beneficio. Hablar y trabajar en español y portugués ha mejorado significativamente mis habilidades </p>
+      </div>
+      <div class="depoimento">
+        <div class="depoimento-header">
+          <img src="/imgDepoimentos/persona3.jpg" alt="Ana Costa" class="depoimento-img">
+          <h3>Juan Suarez</h3>
+        </div>
+        <p>O ambiente colaborativo do IFSul me inspirou a buscar sempre o melhor e a me desenvolver continuamente. </p>
+      </div>
+
+      <div class="depoimento">
+        <div class="depoimento-header">
+          <img src="/imgDepoimentos/persona4.webp" alt="Agustina Mendez" class="depoimento-img">
+          <h3>Agustina Mendez </h3>
+        </div>
+        <p>La infraestructura y el personal docente son excelentes, haciendo que mi experiencia de aprendizaje sea muy enriquecedora.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Logos com Efecto CSS -->
+  <section class="logos">
+    <a href="http://www.ifsul.edu.br/" target="_blank">
+      <img src="/img/Instituto_Federal_Sul-rio-grandense.svg" alt="IFSul Logo" class="logo-hover">
+    </a>
+    <a href="https://utec.edu.uy/es/" target="_blank">
+      <img src="/img/utecLogo.png" alt="UTEC Logo" class="logo-hover">
+    </a>
+    <a href="https://www.utu.edu.uy/node/1598" target="_blank">
+      <img src="/img/utu.png" alt="UTU Logo" class="logo-hover">
+    </a>
+  </section>
+
+  <!-- Scripts -->
+  <script>
+    // Contador para o Processo Seletivo
+    function updateCountdown() {
+        const targetDate = new Date("December 10, 2024 00:00:00").getTime();
+        const now = new Date().getTime();
+        const difference = targetDate - now;
+
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        document.getElementById("ctd-days").innerText = days.toString().padStart(2, '0');
+        document.getElementById("ctd-hours").innerText = hours.toString().padStart(2, '0');
+        document.getElementById("ctd-minutes").innerText = minutes.toString().padStart(2, '0');
+        document.getElementById("ctd-seconds").innerText = seconds.toString().padStart(2, '0');
+
+        if (difference < 0) {
+            clearInterval(interval);
+            document.querySelector(".ctd-timer").innerHTML = "<h2>O processo seletivo já iniciou!</h2>";
+        }
+    }
+
+    const interval = setInterval(updateCountdown, 1000);
+    updateCountdown(); // Llamada inicial para evitar el atraso de 1 segundo
+
+    // Depoimento en Carrusel
+    let depoimentos = document.querySelectorAll('.carousel .depoimento');
+    let index = 0;
+
+    function alternarDepoimentos() {
+      depoimentos.forEach((dep, i) => {
+        if(i === index){
+          dep.classList.add('ativo');
+        } else {
+          dep.classList.remove('ativo');
+        }
+      });
+      index = (index + 1) % depoimentos.length;
+    }
+
+    // Cambia cada 5 segundos
+    setInterval(alternarDepoimentos, 5000);
+    alternarDepoimentos(); // Llamada inicial para mostrar el primer depoimento inmediatamente
+  </script>
+
+</body>
+</html>
