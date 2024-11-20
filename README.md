@@ -1,5 +1,9 @@
 ## IFNews 🌐
-![Macbook-Air-127 0 0 1](https://github.com/user-attachments/assets/d6786509-6bbc-43a1-a67b-58d4d2a16012)
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/d6786509-6bbc-43a1-a67b-58d4d2a16012" alt="Descripción de la imagen" width="500">
+</div>
+
+
 
 IFNews es una página web desarrollada para compartir noticias del IFSUL. El sitio contiene información actualizada sobre deportes y otras novedades de la institución, presentando una interfaz interactiva y dinámica.
 
